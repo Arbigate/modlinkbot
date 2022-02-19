@@ -47,8 +47,9 @@ class ModlinkBot(commands.Bot):
         async with self.session.get("https://search.nexusmods.com/mods", params={"terms": parse_query(query), "game_id": 1704}) as resp:
             if resp.status == 200:
                 data = await resp.json()
-            if results := data["results"]:
-                return results[0]
+                results = data["results"]
+                if results:
+                    return results[0]
             
     async def on_ready(self):
         print('We have logged in as {0.user}'.format(self))
