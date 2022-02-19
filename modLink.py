@@ -29,7 +29,8 @@ async def get_modlink(self, query):
     async with self.session.get("https://search.nexusmods.com/mods", params={"terms": parse_query(query), "game_id": 1704}) as resp:
         if resp.status == 200:
             data = await resp.json()
-            if results := data["results"]:
+            results = data["results"]
+            if results:
                 return results[0]
 
 
