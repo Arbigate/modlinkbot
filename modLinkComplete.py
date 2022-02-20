@@ -69,7 +69,7 @@ class ModlinkBot(commands.Bot):
                 embed.add_field(name="Information", value = 'If you have any issues with this bot or want the source code, please message Arbigate#6162', inline=False)
                 await message.channel.send(embed=embed)
             else:
-                await message.channel.send("No results for: {query}")
+                await message.channel.send("There were no results for that search term.")
 
 bot = ModlinkBot()
 bot.run(os.getenv("DISCORD_TOKEN"))
