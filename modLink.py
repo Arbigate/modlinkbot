@@ -22,7 +22,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 from urllib.parse import quote
 
 def parse_query(query):
-    return query.replace(" ", ",")
+    return query.replace(" ", ",").replace("-", ",")
     
 async def get_modlink(self, query):
     
