@@ -62,6 +62,12 @@ class ModlinkBot(commands.Bot):
         if len(queries) > 5:
             return await message.channel.send('You cannot link more than 5 mods in a message.')
         for query in queries:
+            if query.lower() == "lux": #NOTE: This is a temporary measure, and I plan to do this differently in the future. I just needed a quick fix, since I'll implement the "full" version along with many other functions in the next version. 
+                lux_embed = discord.Embed(title= "Lux")
+                lux_embed.add_field(name="Special Edition", value = 'https://www.nexusmods.com/skyrimspecialedition/mods/43158')
+                lux_embed.add_field(name="Information", value = 'If you have any issues with this bot or want the source code, please message Arbigate#6162', inline=False)
+                await message.channel.send(embed=lux_embed)
+                continue
             modlink = await self.get_modlink(query)
             if modlink is not None:
                 embed = discord.Embed(title= modlink["name"])
