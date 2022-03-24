@@ -27,5 +27,6 @@ manualNexusExceptions = {
 'nff':'Nether Follower Framework',
 'ussep':'Unofficial Skyrim Special Edition Patch',
 'mo2':'Mod Organizer 2',
-'lotd':'Legacy of the Dragonborn'
+'lotd':'Legacy of the Dragonborn',
+'icow':'Immersive College of Winterhold'
 }
