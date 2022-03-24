@@ -24,6 +24,7 @@ import re
 import aiohttp
 import os
 from modLinkExceptions import manualExceptions
+from modLinkExceptions import manualNexusExceptions
 from dotenv import load_dotenv
 from discord.ext import commands
 from modLink import get_modlink
@@ -69,7 +70,10 @@ class ModlinkBot(commands.Bot):
                 exceptions_embed.add_field(name="Information", value = 'If you have any issues with this bot or want the source code, please message Arbigate#6162', inline=False)
                 await message.channel.send(embed=exceptions_embed)
                 continue
-            modlink = await self.get_modlink(query)
+            if query.lower() in manualNexusExceptions.keys():
+                modlink = await self.get_modlink(manualNexusExceptions[query.lower()])
+            else:    
+                modlink = await self.get_modlink(query)
             if modlink is not None:
                 embed = discord.Embed(title= modlink["name"])
                 embed.add_field(name="Special Edition", value = 'https://www.nexusmods.com' + modlink["url"])
