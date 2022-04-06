@@ -30,5 +30,8 @@ manualNexusExceptions = {
 'lotd':'Legacy of the Dragonborn',
 'icow':'Immersive College of Winterhold',
 'nemesis':'Nemesis Unlimited Behavior Engine',
-'cgo':'Combat Gameplay Overhaul'
+'cgo':'Combat Gameplay Overhaul',
+'mbo':'Movement Behavior Overhaul',
+'jbo':'Jump Behavior Overhaul',
+'tdm':'True Directional Movement'
 }
