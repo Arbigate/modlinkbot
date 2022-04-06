@@ -64,6 +64,12 @@ class ModlinkBot(commands.Bot):
         if len(queries) > 5:
             return await message.channel.send('You cannot link more than 5 mods in a message.')
         for query in queries:
+            if query.lower() == "source":
+                source_embed = discord.Embed(title="Source Code")
+                source_embed.add_field(name="Source", value = 'https://github.com/Arbigate/modlinkbot')
+                source_embed.add_field(name="Information", value = 'The source code can be found above. Typically I would add a normal command for the source code, but I had to set this up in a rush, so I apologize.', inline=False)
+                await message.channel.send(embed=source_embed)
+                continue
             if query.lower() in manualExceptions.keys():
                 exceptions_embed = discord.Embed(title= str(query.upper()))
                 exceptions_embed.add_field(name="Special Edition", value = manualExceptions[query.lower()])
