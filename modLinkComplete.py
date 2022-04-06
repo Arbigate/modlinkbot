@@ -67,7 +67,7 @@ class ModlinkBot(commands.Bot):
             if query.lower() in manualExceptions.keys():
                 exceptions_embed = discord.Embed(title= str(query.upper()))
                 exceptions_embed.add_field(name="Special Edition", value = manualExceptions[query.lower()])
-                exceptions_embed.add_field(name="Information", value = 'If you have any issues with this bot or want the source code, please message Arbigate#6162', inline=False)
+                exceptions_embed.add_field(name="Information", value = 'If you have any issues with this bot, please message Arbigate#6162. For the source code, use {source}', inline=False)
                 await message.channel.send(embed=exceptions_embed)
                 continue
             if query.lower() in manualNexusExceptions.keys():
@@ -77,7 +77,7 @@ class ModlinkBot(commands.Bot):
             if modlink is not None:
                 embed = discord.Embed(title= modlink["name"])
                 embed.add_field(name="Special Edition", value = 'https://www.nexusmods.com' + modlink["url"])
-                embed.add_field(name="Information", value = 'If you have any issues with this bot or want the source code, please message Arbigate#6162', inline=False)
+                embed.add_field(name="Information", value = 'If you have any issues with this bot, please message Arbigate#6162. For the source code, use {source}', inline=False)
                 await message.channel.send(embed=embed)
             else:
                 await message.channel.send("There were no results for that search term.")
