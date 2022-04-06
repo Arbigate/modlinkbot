@@ -20,8 +20,7 @@ manualExceptions = {
 'enbseries':'http://enbdev.com/download_mod_tesskyrimse.htm',
 'lux':'https://www.nexusmods.com/skyrimspecialedition/mods/43158',
 'enhanced blood textures':'https://www.nexusmods.com/skyrimspecialedition/mods/2357',
-'source':'https://github.com/Arbigate/modlinkbot' #Note: This is a weird way to make the source code easy to access, but due to some circumstances, I do not have time to add commands with Cogs.
-}                                                 #      As such, this is a temporary measure so I am able to honor my license terms without needing to be available to PM or contact.
+}
 
 manualNexusExceptions = {
 'elfx':'Enhanced Lights and FX',
