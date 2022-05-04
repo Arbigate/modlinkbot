@@ -24,9 +24,15 @@ exceptions = {
 'wabbajack':'https://www.wabbajack.org'
 }
 
-le_modlink_exceptions = []
+le_modlink_exceptions = [
+'skyrim 2020',
+'skyrim 2020 parallax',
+'pi-cho'
+]
 
-se_modlink_exceptions = []
+se_modlink_exceptions = [
+
+]
 
 common_acronyms = {
 'elfx':'Enhanced Lights and FX',
