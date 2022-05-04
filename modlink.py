@@ -20,7 +20,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
 def parse_query(query): #This is lame currently, but I'll improve it later. 
-    return query.replace(" ", ",").replace("-", ",")
+    return query.replace(" ", ",").replace("-", ",").replace("(", "").replace(")", "")
     
 async def get_modlink(self, query):
     if query.lower() not in se_modlink_exceptions:
