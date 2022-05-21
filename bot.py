@@ -47,8 +47,6 @@ class ModlinkBot(commands.Bot):
     async def startup(self):
         self.session = aiohttp.ClientSession()
 
-
-
     async def close(self):
         await self.session.close()
         await super().close()
