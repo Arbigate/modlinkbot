@@ -36,20 +36,6 @@ class ErrorReporting(commands.Cog):
         await user.send(embed=embed)
         await ctx.send("The error has been reported. Thank you!")
 
-
-
-
-    #@commands.command(name='error')
-    #async def error(self, ctx):
-    #    user = self.bot.get_user(668828647653638174)
-    #    if user is None:
-    #        user = await self.bot.fetch_user(668828647653638174)
-    #        sender = ctx.message.author.id
-    #        channel = ctx.message.channel.name
         
-    #    await user.send(f"There is an issue with Modlink. Notified by {sender} in #{channel}.")
-
-
-
 def setup(bot):
     bot.add_cog(ErrorReporting(bot))
