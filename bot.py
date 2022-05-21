@@ -35,7 +35,7 @@ from help import HelpCommand
 
 SEARCH_REGEX = re.compile(r'{(.*?)}')
 intents = discord.Intents.default()
-extensions = ['cogs.modding_support']
+extensions = ['cogs.modding_support', 'cogs.error_reporting']
 load_dotenv()
 
 class ModlinkBot(commands.Bot):
