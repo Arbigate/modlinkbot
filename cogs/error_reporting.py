@@ -15,6 +15,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import discord
 from discord.ext import commands
+from datetime import datetime
 
 
 class ErrorReporting(commands.Cog):
@@ -30,9 +31,11 @@ class ErrorReporting(commands.Cog):
             sender_id = ctx.message.author.id
             sender_name = ctx.message.author.name
             channel = ctx.message.channel.name
+            timestamp = datetime.now()
         embed = discord.Embed(title="Modlink Error Reported")
         embed.add_field(name="Reporter:", value=f"Name: {sender_name} \n ID: {sender_id}", inline=False)
         embed.add_field(name="Channel:", value=f"#{channel}", inline=False)
+        embed.add_field(name="Date and Time", value= str(timestamp))
         await user.send(embed=embed)
         await ctx.send("The error has been reported. Thank you!")
 
